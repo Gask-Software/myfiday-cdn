@@ -11,11 +11,11 @@ import {
     GoogleAuthProvider
 } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
 
-var privatePages = [
+export var privatePages = [
     '/dashboard'
 ];
 
-var publicPages = [
+export var publicPages = [
     '/sign-up',
     '/sign-in'
 ];

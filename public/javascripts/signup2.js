@@ -17,7 +17,7 @@ auth.onAuthStateChanged(user => {
     if (user) {
         // User is signed in.
         if (publicPages.includes(currentPath)) {
-            window.location.replace('/dashboard');
+            window.location.replace('./dashboard');
         } else {
             console.log('User is logged in!');
             console.log('Email: ' + user.email);
@@ -29,7 +29,7 @@ auth.onAuthStateChanged(user => {
     } else {
         // User is signed out.
         if (privatePages.includes(currentPath)) {
-            window.location.replace('/');
+            window.location.replace('./');
         } else {
             console.log('No user is logged in');
             privateLink.style.display = 'none';
