@@ -44,4 +44,6 @@ const signup = () => {
 };
 
 //  Add event listeners to buttons
-signInButton.addEventListener('click', signup);
+if (signInButton) {
+    signInButton.addEventListener('click', signup);
+}

@@ -45,9 +45,9 @@ auth.onAuthStateChanged(user => {
             console.log('User is logged in!');
             console.log('Email: ' + user.email);
             console.log('UID: ' + user.uid);
-            signupLink.style.display = 'none';
-            loginLink.style.display = 'none';
-            loadingScreen.style.display = 'none';
+            // signupLink.style.display = 'none';
+            // loginLink.style.display = 'none';
+            // loadingScreen.style.display = 'none';
         }
     } else {
         // User is signed out.
@@ -55,9 +55,9 @@ auth.onAuthStateChanged(user => {
             window.location.replace('./');
         } else {
             console.log('No user is logged in');
-            privateLink.style.display = 'none';
-            logoutLink.style.display = 'none';
-            loadingScreen.style.display = 'none';
+            // privateLink.style.display = 'none';
+            // logoutLink.style.display = 'none';
+            // loadingScreen.style.display = 'none';
         }
     }
 });

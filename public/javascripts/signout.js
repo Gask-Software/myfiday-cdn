@@ -10,4 +10,8 @@ const signout = () => {
     window.location.replace('./');
 }
 
-signOutButton.addEventListener('click', signout);
+if (signOutButton) {
+    signOutButton.addEventListener('click', signout);
+} else {
+    console.log("DEAD KO");
+}
