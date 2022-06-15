@@ -14,11 +14,6 @@ const userName = document.querySelector('#userName');
 const userProfilePic = document.querySelector('#userProfilePic');
 const loader = document.querySelector('#loader');
 
-//  SignUp and Signout Fuctions
-const signout = () => {
-    auth.signOut();
-}
-
 const signup = () => {
 
     const provider = new GoogleAuthProvider();
