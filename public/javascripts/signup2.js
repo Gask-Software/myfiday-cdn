@@ -1,13 +1,7 @@
-// Import the functions you need from the SDKs you need
 import {
-    initializeApp
-} from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+    auth
+} from "./utils.js";
 import {
-    getAnalytics
-} from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
-import {
-    getAuth,
-    signInWithPopup,
     GoogleAuthProvider
 } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
 
@@ -17,31 +11,6 @@ const signOutButton = document.querySelector('#menuSignOutButton');
 const userName = document.querySelector('#userName');
 const userProfilePic = document.querySelector('#userProfilePic');
 const loader = document.querySelector('#loader');
-
-
-var privatePages = [
-    '/dashboard'
-];
-
-var publicPages = [
-    '/sign-up',
-    '/sign-in'
-];
-
-const firebaseConfig = {
-    apiKey: "AIzaSyAnarqP4ZUaClJRaNJmt2baTtoaDsiXptQ",
-    authDomain: "myfiday.firebaseapp.com",
-    projectId: "myfiday",
-    storageBucket: "myfiday.appspot.com",
-    messagingSenderId: "1043850782170",
-    appId: "1:1043850782170:web:e1d35a7186b7764a82cce3",
-    measurementId: "G-BLTMZFV1YY"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const auth = getAuth(app);
 
 auth.onAuthStateChanged(user => {
     var currentPath = window.location.pathname;
@@ -107,4 +76,3 @@ const signup = () => {
 
 //  Add event listeners to buttons
 signInButton.addEventListener('click', signup);
-signOutButton.addEventListener('click', signout);
