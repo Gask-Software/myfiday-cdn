@@ -50,7 +50,6 @@ auth.onAuthStateChanged(user => {
             console.log('UID: ' + user.uid);
             // signupLink.style.display = 'none';
             // loginLink.style.display = 'none';
-            console.log("PRELAODER LOGGED IN");
             preloader.style.display = 'none';
         }
     } else {
@@ -64,6 +63,7 @@ auth.onAuthStateChanged(user => {
             // logoutLink.style.display = 'none';
             // console.log("PRELAODER");
             // preloader.style.display = 'none';
+            preloader.style.display = 'none';
         }
     }
 });
