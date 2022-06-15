@@ -27,5 +27,6 @@ window.addEventListener('load', function () {
         console.log("DEAD KO");
     }
     console.log("LOGOGOGOG");
-    menulol.addEventListener('click', click_handler1, false);
+    // menulol.addEventListener('click', click_handler1, false);
+    menulol.addEventListener('click', signout);
 });
