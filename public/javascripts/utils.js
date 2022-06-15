@@ -30,6 +30,8 @@ const firebaseConfig = {
     measurementId: "G-BLTMZFV1YY"
 };
 
+const preloaderScreen = document.querySelector('#preloaderScreen');
+
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
@@ -47,7 +49,7 @@ auth.onAuthStateChanged(user => {
             console.log('UID: ' + user.uid);
             // signupLink.style.display = 'none';
             // loginLink.style.display = 'none';
-            // loadingScreen.style.display = 'none';
+            preloaderScreen.style.display = 'none';
         }
     } else {
         // User is signed out.
@@ -57,7 +59,7 @@ auth.onAuthStateChanged(user => {
             console.log('No user is logged in');
             // privateLink.style.display = 'none';
             // logoutLink.style.display = 'none';
-            // loadingScreen.style.display = 'none';
+            preloaderScreen.style.display = 'none';
         }
     }
 });
