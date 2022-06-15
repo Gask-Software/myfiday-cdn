@@ -2,8 +2,7 @@ import {
     auth,
 } from "./utils.js";
 
-const signOutButton = document.querySelector('#menuSignOutButton');
-const menulol = document.querySelector('#menulol');
+const menulol = document.querySelector('#menulogout');
 const menulol2 = document.querySelector('#menulol2');
 
 console.log("IS THIS EVEN LOADING?");
@@ -30,5 +29,4 @@ window.addEventListener('load', function () {
     // menulol.addEventListener('click', click_handler1, false);
     menulol.addEventListener('click', signout);
     menulol2.addEventListener('click', signout);
-    signOutButton.addEventListener('click', signout);
 });
