@@ -1,5 +1,7 @@
 import {
-    auth
+    auth,
+    publicPages,
+    privatePages
 } from "./utils.js";
 import {
     GoogleAuthProvider
