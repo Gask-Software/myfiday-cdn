@@ -30,7 +30,7 @@ const firebaseConfig = {
     measurementId: "G-BLTMZFV1YY"
 };
 
-const preloader = document.querySelector('#preloaderScreen');
+const preloader = document.querySelector('#loader');
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
