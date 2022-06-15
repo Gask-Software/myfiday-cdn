@@ -34,3 +34,30 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
 export const auth = getAuth(app);
+
+auth.onAuthStateChanged(user => {
+    var currentPath = window.location.pathname;
+    if (user) {
+        // User is signed in.
+        if (publicPages.includes(currentPath)) {
+            window.location.replace('./dashboard');
+        } else {
+            console.log('User is logged in!');
+            console.log('Email: ' + user.email);
+            console.log('UID: ' + user.uid);
+            signupLink.style.display = 'none';
+            loginLink.style.display = 'none';
+            loadingScreen.style.display = 'none';
+        }
+    } else {
+        // User is signed out.
+        if (privatePages.includes(currentPath)) {
+            window.location.replace('./');
+        } else {
+            console.log('No user is logged in');
+            privateLink.style.display = 'none';
+            logoutLink.style.display = 'none';
+            loadingScreen.style.display = 'none';
+        }
+    }
+});
