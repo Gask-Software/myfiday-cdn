@@ -12,8 +12,12 @@ const signout = () => {
     window.location.replace('./');
 }
 
-if (signOutButton) {
-    signOutButton.addEventListener('click', signout);
-} else {
-    console.log("DEAD KO");
-}
+window.addEventListener('load', function () {
+    console.log("LOADED");
+    if (signOutButton) {
+        console.log("LEGGOOO");
+        signOutButton.addEventListener('click', signout);
+    } else {
+        console.log("DEAD KO");
+    }
+});
