@@ -3,6 +3,7 @@ import {
 } from "./utils.js";
 
 const signOutButton = document.querySelector('#menuSignOutButton');
+const menulol = document.querySelector('#menulol');
 
 console.log("IS THIS EVEN LOADING?");
 
@@ -25,4 +26,6 @@ window.addEventListener('load', function () {
     } else {
         console.log("DEAD KO");
     }
+    console.log("LOGOGOGOG");
+    menulol.addEventListener('click', click_handler1, false);
 });
