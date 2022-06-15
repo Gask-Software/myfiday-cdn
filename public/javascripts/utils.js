@@ -30,7 +30,7 @@ const firebaseConfig = {
     measurementId: "G-BLTMZFV1YY"
 };
 
-const preloaderScreen = document.querySelector('#preloaderScreen');
+const preloader = document.querySelector('#preloader');
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
@@ -40,6 +40,7 @@ export const auth = getAuth(app);
 auth.onAuthStateChanged(user => {
     var currentPath = window.location.pathname;
     if (user) {
+        console.log("User is logged in");
         // User is signed in.
         if (publicPages.includes(currentPath)) {
             window.location.replace('./dashboard');
@@ -49,10 +50,11 @@ auth.onAuthStateChanged(user => {
             console.log('UID: ' + user.uid);
             // signupLink.style.display = 'none';
             // loginLink.style.display = 'none';
-            console.log("PRELAODER");
-            preloaderScreen.style.display = 'none';
+            console.log("PRELAODER LOGGED IN");
+            preloader.style.display = 'none';
         }
     } else {
+        console.log("User is logged out");
         // User is signed out.
         if (privatePages.includes(currentPath)) {
             window.location.replace('./');
@@ -60,8 +62,8 @@ auth.onAuthStateChanged(user => {
             console.log('No user is logged in');
             // privateLink.style.display = 'none';
             // logoutLink.style.display = 'none';
-            console.log("PRELAODER");
-            preloaderScreen.style.display = 'none';
+            // console.log("PRELAODER");
+            // preloader.style.display = 'none';
         }
     }
 });
